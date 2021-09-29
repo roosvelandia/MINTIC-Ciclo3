@@ -16,6 +16,10 @@
         <servlet-name>Controlador_proveedor</servlet-name>
         <servlet-class>mintic.sprint2.mintiendaSB.Controlador.Controlador_proveedor</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Controlador_producto</servlet-name>
+        <servlet-class>mintic.sprint2.mintiendaSB.Controlador.Controlador_producto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>Controlador_proveedor</servlet-name>
         <url-pattern>/Controlador_proveedor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controlador_producto</servlet-name>
+        <url-pattern>/Controlador_producto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

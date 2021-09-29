@@ -45,7 +45,7 @@
                            target="myFrame">Proveedores</a>
                     </li>
                     <li class="nav-item">
-                        <a style= "margin-left: 10px; border:none;"  class="btn btn-outline-light" href="#" 
+                        <a style= "margin-left: 10px; border:none;"  class="btn btn-outline-light" href="../Controlador_producto?menu=Productos&accion=Listar" 
                            target="myFrame">Productos</a>
                     </li>
                     <li class="nav-item">
