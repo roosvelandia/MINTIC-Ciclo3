@@ -32,10 +32,9 @@
                         </div>
                         <div class="form-group m-3" >
                             <label>Nombre</label>
-                            <input  type="text" name="txtNombre" value="${usuarioEdit.nombreUsuario}" 
-                                    class="form-control" required="">
-                            <div class="valid-feedback">Campo OK</div>
-                            <div class="invalid-feedback">Complete los datos</div>
+                                <input  type="text" name="txtNombre" value="${usuarioEdit.nombreUsuario}" class="form-control" required="">
+                                <div class="valid-feedback">Campo OK</div>
+                                <div class="invalid-feedback">Complete los datos</div>
                         </div>
                         <div class="form-group m-3" >
                             <label>Clave</label>
@@ -69,9 +68,15 @@
                             <div class="invalid-feedback">Complete los datos</div>
                         </div>
                         <input type="submit" name="accion" value="Agregar" class="btn btn-success m-3" style="background-color: #26A69A;" >
-                        <input type="submit" name="accion" value="Actualizar" class="btn btn-success m-3" style="background-color: #26A69A;">
-                        <input type="submit" name="accion" value="Buscar" class="btn btn-success m-3" style="background-color: #26A69A;">
+                        <input type="submit" name="accion" value="Actualizar" class="btn btn-success m-3" style="background-color: #26A69A;"> 
+                        <div>
+                            <label>Localizador</label>
+                            <input  type="text" name="txtLocalizador">
+                            <input type="submit" name="accion" value="Buscar" class="btn btn-success m-3" style="background-color: #26A69A;"> 
+                        </div>
+                            
                     </form>
+                        
                 </div>
             </div>
             <div class="col-sm-8">
