@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Página de Proveedores</title>
+        <title>Página de Clientes</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
               integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" crossorigin="anonymous">
@@ -17,14 +17,14 @@
         <div class="d-flex"> 
             <div class="card col-sm-4">
                 <div class="card-body">
-                    <form class="needs-validation" action="Controlador_proveedor?menu=Proveedores" method="POST" novalidate>
+                    <form class="needs-validation" action="Controlador_cliente?menu=Clientes" method="POST" novalidate>
                         <div class="form-group m-3" >
-                            <label>NIT</label>
-                            <c:if test="${proveedorEdit.nitproveedor!=0}">
-                                <input  type="text" name="txtId" value="${proveedorEdit.nitproveedor}" readonly="" 
+                            <label>ID</label>
+                            <c:if test="${clienteEdit.idCliente!=0}">
+                                <input  type="text" name="txtId" value="${clienteEdit.idCliente}" readonly="" 
                                         class="form-control">
                             </c:if>
-                            <c:if test="${proveedorEdit.nitproveedor==0}">
+                            <c:if test="${clienteEdit.idCliente==0}">
                                 <input  type="text" name="txtId" class="form-control" required="">
                                 <div class="valid-feedback">Campo OK</div>
                                 <div class="invalid-feedback">Complete los datos</div>
@@ -32,28 +32,28 @@
                         </div>
                         <div class="form-group m-3" >
                             <label>Nombre</label>
-                            <input  type="text" name="txtNombre" value="${proveedorEdit.nombre_proveedor}" 
+                            <input  type="text" name="txtNombre" value="${clienteEdit.nombreCliente}" 
                                     class="form-control" required="">
                             <div class="valid-feedback">Campo OK</div>
                             <div class="invalid-feedback">Complete los datos</div>
                         </div>
                         <div class="form-group m-3" >
                             <label>Direccion</label>
-                            <input  type="text" name="txtDireccion" value="${proveedorEdit.direccion_proveedor}" 
+                            <input  type="text" name="txtDireccion" value="${clienteEdit.direccion}" 
                                     class="form-control" required="">
                             <div class="valid-feedback">Campo OK</div>
                             <div class="invalid-feedback">Complete los datos</div>
                         </div>
                         <div class="form-group m-3" >
-                            <label>Ciudad</label>
-                            <input  type="text" name="txtCiudad" value="${proveedorEdit.ciudad_proveedor}" 
+                            <label>Correo</label>
+                            <input  type="text" name="txtCorreo" value="${clienteEdit.correo}" 
                                     class="form-control" required="">
                             <div class="valid-feedback">Campo OK</div>
                             <div class="invalid-feedback">Complete los datos</div>
                         </div>
                         <div class="form-group m-3" >
                             <label>Teléfono</label>
-                            <input  type="text" name="txtTelefono" value="${proveedorEdit.telefono_proveedor}" 
+                            <input  type="text" name="txtTelefono" value="${clienteEdit.telefono}" 
                                     class="form-control" required="">
                             <div class="valid-feedback">Campo OK</div>
                             <div class="invalid-feedback">Complete los datos</div>
@@ -64,7 +64,7 @@
                             <label>Localizador</label>
                             <input  type="text" name="txtLocalizador">
                             <input type="submit" name="accion" value="Buscar" class="btn btn-success m-3" style="background-color: #26A69A;"> 
-                        </div> 
+                        </div>                        
                     </form>
                 </div>
             </div>
@@ -72,25 +72,25 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>NIT</th>
+                            <th>CEDULA</th>
                             <th>NOMBRE</th>
                             <th>DIRECCION</th>
-                            <th>CIUDAD</th>
                             <th>TELEFONO</th>
+                            <th>CORREO</th>
                             <th>ACCIONES</th>
                     </thead>
                     <tbody>
-                        <c:forEach var="e" items="${proveedores}">
+                        <c:forEach var="e" items="${clientes}">
                             <tr>
-                                <td>${e.nitproveedor}</td>
-                                <td>${e.nombre_proveedor}</td>
-                                <td>${e.direccion_proveedor}</td>
-                                <td>${e.ciudad_proveedor}</td>
-                                <td>${e.telefono_proveedor}</td>
+                                <td>${e.idCliente}</td>
+                                <td>${e.nombreCliente}</td>
+                                <td>${e.direccion}</td>
+                                <td>${e.telefono}</td>
+                                <td>${e.correo}</td>
                                 <td>
-                                <a href="Controlador_proveedor?menu=Proveedores&accion=Editar&id=${e.nitproveedor}" 
+                                <a href="Controlador_cliente?menu=Clientes&accion=Editar&id=${e.idCliente}" 
                                    class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
-                                <a href="Controlador_proveedor?menu=Proveedores&accion=Eliminar&id=${e.nitproveedor}" 
+                                <a href="Controlador_cliente?menu=Clientes&accion=Eliminar&id=${e.idCliente}" 
                                    class="btn btn-danger btn-sm"><i class="fa fa-trash-alt"></i></a>
                                     <!-- Modal -->
                                 </td>
